@@ -47,5 +47,6 @@ public class KabooSignUpPage extends PageObject {
         assertTrue("The button is not enabled", nextButton.isEnabled());
         JavascriptExecutor executor = (JavascriptExecutor)getDriver();
         executor.executeScript("arguments[0].click();", nextButton);
+        //needed the javascript for checking the button
     }
 }
