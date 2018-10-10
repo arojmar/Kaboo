@@ -7,6 +7,6 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = {"src/test/resources/features"},
         glue = {"stepDefinitions"},
-        tags = {"@ToTest"})
+        tags = {"@Kaboo"})
 public class ToTestRunner {
 }

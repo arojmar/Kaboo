@@ -17,6 +17,7 @@ public class KabooSignUpDefinitions {
 
     @Given("^user is on signup page$")
     public void user_is_on_signup_page() {
+       loginEnv.storeUserNotRegistered();
        loginEnv.logInEnvironment();
        kabooSignUpSteps.loadSignUpPage();
 //       kabooSignUpSteps.customerClicksOnCreateAccountButton(); // TODO: Solve issue of when click and go and back to the signup page

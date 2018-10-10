@@ -3,6 +3,8 @@ package utils;
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.text.RandomStringGenerator;
 
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 import static org.junit.Assert.assertFalse;
@@ -22,12 +24,10 @@ public class LoginEnv {
     public void logInEnvironment() {
         String kabooEnvLogin = "kaboo";
         String kabooEnvPassword = "flappybird";
-        storeUserNotRegistered();
         getDriver().navigate().to("https://" + kabooEnvLogin + ":" + kabooEnvPassword + "@" + "qatest.staging.kaboo.com/gb");
     }
 
-    private void storeUserNotRegistered(){
-
+    public void storeUserNotRegistered(){
         Serenity.setSessionVariable("USER_NAME").to("test_email");
         Serenity.setSessionVariable("EMAIL").to("test_email@email.com");
         Serenity.setSessionVariable("PASSWORD").to("Test12345");
@@ -43,9 +43,12 @@ public class LoginEnv {
         Serenity.setSessionVariable("COUNTRY").to("GERMANY");
         Serenity.setSessionVariable("CURRENCY").to("EURO");
         Serenity.setSessionVariable("PHONE").to("612345678");
-
     }
 
+    public void getUserRegistered(){
+        Serenity.setSessionVariable("USER_NAME").to("autouk");
+        Serenity.setSessionVariable("PASSWORD").to("Autotest1");
+    }
 
 //    public void assertMainPageIsLoaded() {
 //

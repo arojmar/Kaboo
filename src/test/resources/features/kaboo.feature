@@ -1,5 +1,6 @@
+@Kaboo
 Feature: This is a test for GiG to show how the Page Object and these tests are implemented
-  @ToTest
+
   Scenario: 1-Check that the Kaboo signup is working properly
     Given user is on signup page
     When fills all fields with valid data on step 1
