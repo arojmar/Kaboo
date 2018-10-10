@@ -25,9 +25,9 @@ public class KabooSignUpDefinitions {
 
     @When("^fills all fields with valid data on step 1$")
     public void fills_all_fields_with_valid_data_on_step() {
-        kabooSignUpSteps.checkIfAllFieldsAreEmptyInForm();
+        kabooSignUpSteps.checkIfNewUserFormFieldsAreEmpty();
         kabooSignUpSteps.introduceNewUser();
-        kabooSignUpSteps.checkAllNecessaryCheckboxes();
+        kabooSignUpSteps.checkFormUserNecessaryCheckboxes();
     }
 
     @When("^clicks NEXT$")
@@ -37,11 +37,14 @@ public class KabooSignUpDefinitions {
 
     @When("^fills all fields with valid data from step 2$")
     public void fills_all_fields_with_valid_data_from_step() {
+        kabooSignUpSteps.checkIfContinueUserFormFieldsAreEmpty();
+        kabooSignUpSteps.continueWithNewUser();
+
 
     }
 
     @Then("^register button is enable and clickable$")
     public void register_button_is_enable_and_clickable() {
-
+        kabooSignUpSteps.registerButtonIsEnabledAndClickable();
     }
 }

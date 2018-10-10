@@ -111,7 +111,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 04-10-2018 21:24</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 10-10-2018 03:33</span>
     <br style="clear:left"/>
 </div>
 
@@ -152,9 +152,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span>
                             <span class="test-case-title">
-                                <span class="error-color">1-Check that the Kaboo signup is working properly
+                                <span class="failing-color">1-Check that the Kaboo signup is working properly
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -173,8 +173,8 @@
     <div id="contenttilttle">
             <div class="screenshotFailure panel panel-danger">
 
-                        <div class="panel-heading title="Element not visible exception: The following error occurred: Timed out after 10 seconds. Element not available">
-                            Element not visible exception: The following error occurred: Timed out after 10 seconds. Element not available
+                        <div class="panel-heading title="Assertion error">
+                            Assertion error
                         </div>
                 <div><!-- Stack trace -->
                     <button type="button" class="btn btn-danger" data-toggle="modal"
@@ -192,19 +192,16 @@
                                         aria-label="Close"><span aria-hidden="true">&times;</span>
                                 </button>
                                 <h4 class="modal-title" id="stacktraceModalLabel">
-                                    org.openqa.selenium.ElementNotVisibleException
+                                    java.lang.AssertionError
                                 </h4>
                             </div>
                             <div class="modal-body">
-                                    <h5>
-                                        <pre>The following error occurred: Timed out after 10 seconds. Element not available<br>Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'<br>System info: host: 'commercecrm', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.10.0-862.11.6.el7.x86_64', java.version: '1.8.0_161'<br>Driver info: driver.version: unknown<br>Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'<br>System info: host: 'commercecrm', ip: '127.0.0.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.10.0-862.11.6.el7.x86_64', java.version: '1.8.0_161'<br>Driver info: driver.version: unknown</pre>
-                                    </h5>
-                                    pages.KabooSignUpPage.clickOnNextButton(KabooSignUpPage.java
-                                    :52) <br>
-                                    serenitySteps.KabooSignUpSteps.userClickOnNextButton(KabooSignUpSteps.java
-                                    :45) <br>
-                                    stepDefinitions.KabooSignUpDefinitions.clicks_NEXT(KabooSignUpDefinitions.java
-                                    :35) <br>
+                                    pages.ContinueUserFormPage.checkContinueFormFieldsAreEmpty(ContinueUserFormPage.java
+                                    :56) <br>
+                                    serenitySteps.KabooSignUpSteps.checkIfContinueUserFormFieldsAreEmpty(KabooSignUpSteps.java
+                                    :54) <br>
+                                    stepDefinitions.KabooSignUpDefinitions.fills_all_fields_with_valid_data_from_step(KabooSignUpDefinitions.java
+                                    :40) <br>
                                     cucumber.runner.Runner.runPickle(Runner.java
                                     :80) <br>
                             </div>
@@ -220,12 +217,12 @@
 
 
                 <div class="panel-body">
-                    <a href="pagesource6168831617979654398.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                    <a href="pagesource4428621816738345069.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
                 </div>
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="8f26bb59d251c8e0d2cc631b65ed2628103978506b620f6c6c59cdebc3df2a32.png" title="User click on next button: <span class='error-color'>ERROR</span>" width="1910"/>
+                <img src="0d96c02e81540cbd0d5ddd0cdf8ba91def7c875d260937bffd64fa7af4ace64d.png" title="Check if continue user form fields are empty: <span class='failing-color'>FAILURE</span>" width="1911"/>
             </div>
         </div>
 

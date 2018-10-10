@@ -1,5 +1,6 @@
 package pages;
 
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -35,10 +36,10 @@ public class NewUserFormPage extends PageObject {
     }
 
     public void introductionOfNewUser(){
-        email.sendKeys("test_email@email.com");
-        username.sendKeys("test_email");
-        password.sendKeys("Test1234");
-        repeatPassword.sendKeys("Test1234");
+        email.sendKeys(Serenity.sessionVariableCalled("EMAIL").toString());
+        username.sendKeys(Serenity.sessionVariableCalled("USER_NAME").toString());
+        password.sendKeys(Serenity.sessionVariableCalled("PASSWORD").toString());
+        repeatPassword.sendKeys(Serenity.sessionVariableCalled("PASSWORD").toString());
     }
 
     public void checkWishInfo(){
